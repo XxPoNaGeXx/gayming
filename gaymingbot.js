@@ -1,15 +1,43 @@
 var Discord = require('discord.io');
 var bot = new Discord.Client({
     autorun: true,
-    token: ""
+    token: "MjA1MDgwODQ0NDM0NDA3NDI1.Cu1G2Q.1jg0fojPumLIE7FqnxJ5yRrU2Vw"
 });
 
-// setting the game 
-
-///Broken right now
 
 // listen on messages
 bot.on('message', function(user, userID, channelID, message, event) {
+    
+// setting the game 
+
+
+    bot.setPresence({
+    game: {
+        name: "with my robot cock"
+    }
+});
+    
+    
+      //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    
+    //chat event
+    if (message === "!chat-event") {
+        bot.sendMessage({
+            to: channelID,
+            message: "Hey we have a chat event starting real soon! Be sure to head into the Chat Event voice chat to join in!"
+        });
+    
+    }
+    
+      /////////////////
+      
+    //test
+    if (message === "!gay") {
+        bot.sendMessage({
+            to: channelID,
+            message: "YES PLEASE :fist: "
+        });
+    }
     
      //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	
